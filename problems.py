@@ -21,3 +21,17 @@ for i in list1:
 print(new)
 
 """
+
+#3) change message to emoji
+
+message = input("> ")
+words = message.split(' ')
+print(words)
+emojis = {                          # Windos key + .
+    ":)":"😁",
+    ":(":"😔"
+}
+output = ''
+for word in words:
+    output += emojis.get(word,word) + " "
+print(output)
