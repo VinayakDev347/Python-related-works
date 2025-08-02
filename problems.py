@@ -23,15 +23,37 @@ print(new)
 """
 
 #3) change message to emoji
+"""
+# message = input("> ")
+# words = message.split(' ')
+# print(words)
+# emojis = {                          # Windos key + .
+#     ":)":"😁",
+#     ":(":"😔"
+# }
+# output = ''
+# for word in words:
+#     output += emojis.get(word,word) + " "
+# print(output)
 
-message = input("> ")
-words = message.split(' ')
-print(words)
-emojis = {                          # Windos key + .
-    ":)":"😁",
-    ":(":"😔"
-}
-output = ''
-for word in words:
-    output += emojis.get(word,word) + " "
-print(output)
+"""
+
+#4) Examples for OOPs - Inheritance
+class Pets:
+    def Walk(self):
+        print("walk")
+
+class Dog(Pets):
+    def Bark(self):
+        print("Barking Dogs!!!")
+
+class Cat(Pets):
+    def be_annoying(self):
+        print("be_annoying!!!")
+
+cat1 = Cat()
+cat1.Walk()
+dog1 = Dog()
+dog1.Walk()
+
+    
