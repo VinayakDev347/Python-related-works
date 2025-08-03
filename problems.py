@@ -68,3 +68,17 @@ elif num % 2 == 0:
 else:
     print(f"The Number {num} is odd")
 """
+
+#6) Given two integer variables a and b, and a boolean variable flag. The task is to check the status and return accordingly.
+"""
+def checking(a,b,flag):
+    if flag == False:
+        if ( a>= 0 and b <0) or (a < 0 and b >= 0):
+            return True
+    else:
+        if a < 0 and b <0:
+            return True
+    return False
+
+print(checking(2,4,False))
+"""
