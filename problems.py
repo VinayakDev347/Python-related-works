@@ -39,6 +39,7 @@ print(new)
 """
 
 #4) Examples for OOPs - Inheritance
+"""
 class Pets:
     def Walk(self):
         print("walk")
@@ -55,5 +56,15 @@ cat1 = Cat()
 cat1.Walk()
 dog1 = Dog()
 dog1.Walk()
+"""
 
-    
+#5) Mark Even or odd
+"""
+num = int(input("Enter a number to check the number is even or odd: "))
+if num == 0:
+    print(f"The Number is {num},take it also as even")
+elif num % 2 == 0:
+    print(f"The Given Number {num} is Even")
+else:
+    print(f"The Number {num} is odd")
+"""
