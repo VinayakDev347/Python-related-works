@@ -82,3 +82,9 @@ def checking(a,b,flag):
 
 print(checking(2,4,False))
 """
+
+#7) Using list comprehension write code for finding square from 0 to 10 
+"""
+li = [i*i for i in range(11)]
+print(li)
+"""
