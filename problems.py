@@ -88,3 +88,39 @@ print(checking(2,4,False))
 li = [i*i for i in range(11)]
 print(li)
 """
+
+#8) Write a function which would divide two numbers, design the function in a manner that it handles the divide  by zero exception
+
+"""
+def checking(num1,num2):
+    try:
+        result = num1 / num2
+        return result
+    except ZeroDivisionError:
+        return "Error Occured...cannot divide by 0"
+    
+print(checking(11,0))       #error occure here
+"""
+
+#9) Write Python code to open a file named  demo.txt and write some random data into it.
+
+"""
+with open("demo.txt","w") as file:
+    file.write("Datas are Here guyzz....")
+
+#10) Open the file,read  the contents and display them as output.
+
+with open("demo.txt","r") as file:
+    contents = file.read()
+    print(contents)
+
+#11) Write python code to add  additional text to the excisting  file on a new line  without deleting the previous contents
+
+with open("demo.txt","a") as file:
+    file.write("This is the additional text's")
+    
+    #checking the datas are added or not!
+with open("demo.txt","r") as file:
+    contents = file.read()
+    print(contents)
+    """
