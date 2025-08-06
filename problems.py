@@ -123,4 +123,27 @@ with open("demo.txt","a") as file:
 with open("demo.txt","r") as file:
     contents = file.read()
     print(contents)
-    """
+"""
+
+#12) Create a number guessing game 
+"""
+import random as rd
+
+secreat_no = rd.randint(1,10)
+attempts = 3
+
+while attempts > 0:
+    guess = int(input("Take a Guess, Between 1 to 10 :- "))
+    if guess == secreat_no:
+        print("You Guessed Correctly!!!")
+        break
+    elif guess < secreat_no:
+        print("Your Guess is Low ,Try Again...:- ")
+    else:
+        print("Your Guess is high ,Try Again...:- ")
+    attempts -= 1
+
+if attempts == 0:
+    print("Your attempts is over Your Failed!!! \n Secreat Number is : ",secreat_no)
+"""
+    
