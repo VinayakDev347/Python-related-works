@@ -154,12 +154,21 @@ print("\n***********************************\n Welcome to Simple Calculator!!!\n
 num1 = int(input("Enter Your First Number :- "))
 num2 = int(input("Enter your Second Number :- "))
 
-print(f"Addition: {num1+num2}")
-print(f"Substraction: {num1-num2}")
-print(f"Multiplication: {num1*num2}")
-print(f"Division: {num1/num2}")
-print(f"FloorDivision: {num1//num2}")
-print(f"Remainder: {num1%num2}")
+Addition = num1 + num2
+Substraction = num1 - num2
+Multiplication = num1 * num2
+Division = num1 / num2
+Fdivision = num1//num2
+Exponent = num1**num2
+Modules = num1 % num2
+
+print(f"Addition: {num1} + {num2} is {Addition}")
+print(f"Substraction: {num1} - {num2} is {Substraction}")
+print(f"Multiplication: {num1} X {num2} is {Multiplication}")
+print(f"Division: {num1} / {num2} is {Division}")
+print(f"FloorDivision: {num1}//{num2} is {Fdivision}")
+print(f"Remainder: {num1}%{num2} is {Modules}")
+print(f"Exponentiation:{num1}**{num2} is {Exponent}")
 print("***********************************")
 print("ThankYou!!!")
 """
