@@ -146,4 +146,20 @@ while attempts > 0:
 if attempts == 0:
     print("Your attempts is over Your Failed!!! \n Secreat Number is : ",secreat_no)
 """
-    
+
+#13) Create simple calculator
+
+"""
+print("\n***********************************\n Welcome to Simple Calculator!!!\n*********************************** \n")
+num1 = int(input("Enter Your First Number :- "))
+num2 = int(input("Enter your Second Number :- "))
+
+print(f"Addition: {num1+num2}")
+print(f"Substraction: {num1-num2}")
+print(f"Multiplication: {num1*num2}")
+print(f"Division: {num1/num2}")
+print(f"FloorDivision: {num1//num2}")
+print(f"Remainder: {num1%num2}")
+print("***********************************")
+print("ThankYou!!!")
+"""
