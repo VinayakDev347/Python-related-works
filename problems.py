@@ -172,3 +172,22 @@ print(f"Exponentiation:{num1}**{num2} is {Exponent}")
 print("***********************************")
 print("ThankYou!!!")
 """
+
+#14) Number comparison tool
+"""
+num1 = int(input("Enter First Number : "))
+num2 = int(input("Enter Second Number : "))
+print("---------------------------------------------------")
+
+if num1 == num2:
+    print(f"Numbers are same {num1}")
+elif num1 > num2:
+    print(f"{num1} is greater than {num2} ")
+else:
+    print(f"{num1} is less than {num2}")
+print("---------------------------------------------------")
+if num1 ==0 or num2 == 0:
+    print("one number you entered is 0")
+else:
+    print("entered Two input is zero")
+"""
