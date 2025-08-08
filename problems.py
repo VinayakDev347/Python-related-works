@@ -205,3 +205,46 @@ while start > 0:
     start -= 1
 print("--------------Countdown completed!!!--------------")
 """
+
+#16) Basic Math Quiz game 
+import random 
+
+def generate_q():
+    num1 = random.randint(1,10)
+    num2 = random.randint(1,10)
+    operator = random.choice(['+','-','*'])
+    if operator == '+':
+        answer = num1 + num2
+    elif operator == '-':
+        answer = num1 - num2
+    else:
+        answer = num1 * num2
+
+    return f"{num1} {operator} {num2}",answer
+
+def math_quiz():
+    score = 0 
+    rounds = 5
+    print("--------------Welcome to Math Quizz--------------")
+
+    for i in range(rounds):
+        questions, correct_answer = generate_q()
+        print(f"\nQuestion {i + 1} : {questions}")
+        user_answer = int(input("Your Answer: "))
+
+        if user_answer == correct_answer:
+            print("Correct Answer!!")
+            score += 1
+        else:
+            print(f"Wrong Answer! The correct answer is : {correct_answer}")
+
+    print("\n--------------Game Over--------------")
+    print(f"Your final score is : {score}/{rounds} ")
+    if score == rounds:
+        print("Congratulations! You got  all the question Right") 
+    elif score >= rounds//2:
+        print("Good Job! Yor did it")
+    else:
+        print("Keep practicing! You can do better next time.")
+
+math_quiz()
