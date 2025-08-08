@@ -191,3 +191,17 @@ if num1 ==0 or num2 == 0:
 else:
     print("entered Two input is zero")
 """
+
+#15) create countdown timer 
+"""
+import time
+
+start = int(input("Enter the number to start the countdown from: "))
+
+print("\n--------------Countdown Begins--------------")
+while start > 0:
+    print(start)
+    time.sleep(1)       #take 1sec gap
+    start -= 1
+print("--------------Countdown completed!!!--------------")
+"""
