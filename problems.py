@@ -207,6 +207,7 @@ print("--------------Countdown completed!!!--------------")
 """
 
 #16) Basic Math Quiz game 
+"""
 import random 
 
 def generate_q():
@@ -248,3 +249,54 @@ def math_quiz():
         print("Keep practicing! You can do better next time.")
 
 math_quiz()
+"""
+
+#17) Shopping list app
+"""
+shopping_list = []
+
+def show_menu():
+    print("\n-------Shopping List Menu-------")
+    print("1.View the shopping list")
+    print("2.Add an Item")
+    print("3.Remove an Item")
+    print("4.Clear the list")
+    print("5.Exit")
+
+while True:
+    show_menu()
+    choice = int(input("Enter Your Choice 1 - 5: "))
+    
+    if choice == 1:
+        print("\n----------shopping_list----------")
+        if not shopping_list:
+            print("Shopping List is empty....")
+        else:
+            for index,item in enumerate(shopping_list):
+                print(f"{index+1}. {item} ")
+
+    elif choice == 2:
+        item = input("Enter Item To Add: ")
+        shopping_list.append(item)
+        print(f"{item} has been added to the Shopping List")
+    
+    elif choice == 3:
+        item = input("Which item you want to remove?")
+        if item in shopping_list:
+            shopping_list.remove(item)
+            print(f"{item} was removed successfully")
+        else:
+            print(f"{item} not found in the list")
+
+    elif choice == 4:
+        shopping_list.clear()
+        print("Shopping list was cleared successfully")
+
+    elif choice == 5:
+        print("Good Bye, Exited!!!")    
+        break
+    else:
+        print("invalid choice,try again!")
+
+show_menu()
+"""
