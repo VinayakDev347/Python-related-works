@@ -300,3 +300,79 @@ while True:
 
 show_menu()
 """
+
+#18) Contact Book dictonaries
+contact_book = {}
+
+def show_menu():
+    print("\n---------Contact Book---------")
+    print("1. Add Contact")
+    print("2. View Contact")
+    print("3. Search Contact")
+    print("4. Edit Contact")
+    print("5. Delete Contact")
+    print("6. Exit")
+
+def add_contact():
+    name = input("Enter Your Contact name: ")
+    phone = input("Enter Your Contact Phone: ")
+    email = input("Enter Your Contact Mail: ")
+    contact_book[name] = {"phone":phone,"email":email}
+    print(f"{name} has been added to your contact list")
+
+def view_contact():
+    if contact_book:
+        print("\n---------Contact Book---------")
+        for name, details in contact_book.items():
+            print(f"Name: {name}")
+            print(f"phone: {details['phone']}")
+            print(f"email: {details['email']}")
+        else:
+            print("Your contact is empty!!!")
+
+def search_contact():
+    name = input("Enter the name of your contact you want to search")
+    if name in contact_book:
+        print(f"\n---------Contact detail of your {name}---------")
+        print(f"Name: {name}")
+        print(f"phone: {contact_book[name]['phone']}")
+        print(f"email: {contact_book[name]['email']}")
+    else:
+        print(f"Contact {name} not found in your contact book.")
+
+def edit_contact():
+    name = input("Enter the name of your contact you want to Edit")
+    if name in contact_book:
+        phone = input("Enter Your Contact Phone: ")
+        email = input("Enter Your Contact Mail: ")
+        contact_book[name] = {"phone":phone,"email":email}
+        print(f"Contact {name} has been updated successfully")
+    else:
+        print(f"Contact {name} not found in your contact book!!!")
+
+def delete_contact():
+    name = input("Enter the name of your contact you want to delete")
+    if name in contact_book:
+        del contact_book[name]
+        print(f"Contact {name} has been deleted successfully")
+    else:
+        print(f"Contact {name} has not found in your contact book!!!")
+
+while True:
+    show_menu()
+    choice = int(input("enter your choice (1-6): "))
+    if choice == 1:
+        add_contact()
+    elif choice == 2:
+        view_contact()
+    elif choice == 3:
+        search_contact()
+    elif choice == 4:
+        edit_contact()
+    elif choice == 5:
+        delete_contact()
+    elif choice == 6:
+        print("ThankYou for using Contact Book. Good Bye")
+        break
+    else:
+        print("Invalid choice. please select valid options 1-6 ")
