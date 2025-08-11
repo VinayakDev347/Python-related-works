@@ -306,7 +306,7 @@ show_menu()
 contact_book = {}
 
 def show_menu():
-    print("\n---------Contact Book---------")
+    print("\n***********Contact Book***********")
     print("1. Add Contact")
     print("2. View Contact")
     print("3. Search Contact")
@@ -328,8 +328,8 @@ def view_contact():
             print(f"Name: {name}")
             print(f"phone: {details['phone']}")
             print(f"email: {details['email']}")
-        else:
-            print("Your contact is empty!!!")
+    else:
+        print("Your contact is empty!!!")
 
 def search_contact():
     name = input("Enter the name of your contact you want to search")
