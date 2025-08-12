@@ -380,6 +380,7 @@ while True:
 """
 
 #19) Ingredients checker 
+"""
 recipe_ingredients = {"flour" , "sugar" , "butter" , "eggs" , "milk"}
 
 user_input = input("Enter the ingredients you have (seperated by comas): ")
@@ -398,3 +399,4 @@ if extra_ingredients:
     print(f"You have all the extra ingredients {",".join(extra_ingredients)}")
 else:
     print("You have all the ingredients needed")
+"""
