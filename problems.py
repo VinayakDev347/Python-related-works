@@ -378,3 +378,23 @@ while True:
     else:
         print("Invalid choice. please select valid options 1-6 ")
 """
+
+#19) Ingredients checker 
+recipe_ingredients = {"flour" , "sugar" , "butter" , "eggs" , "milk"}
+
+user_input = input("Enter the ingredients you have (seperated by comas): ")
+user_ingredients = set(user_input.split(", "))
+
+missing_ingredients = recipe_ingredients - user_ingredients
+extra_ingredients = user_ingredients - recipe_ingredients
+
+print("-------ingredient Checker Result----------")
+if missing_ingredients:
+    print(f"You are missing the following ingredients: {','.join(missing_ingredients)}")
+else:
+    print("You have all the ingredients needed")
+
+if extra_ingredients:
+    print(f"You have all the extra ingredients {",".join(extra_ingredients)}")
+else:
+    print("You have all the ingredients needed")
