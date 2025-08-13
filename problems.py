@@ -402,6 +402,7 @@ else:
 """
 
 #20) Note Taiking App 
+"""
 FILE_NAME= "MyTestNotes.txt"
 
 def show_menu():
@@ -457,3 +458,4 @@ while True:
         break
     else:
         print("invalid choice! try (1-4): ")
+"""
