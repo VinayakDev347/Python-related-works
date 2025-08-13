@@ -461,6 +461,7 @@ while True:
 """
 
 #21) Safe Calculator 
+"""
 def add(x,y):
     return x + y
 
@@ -512,3 +513,4 @@ while True:
         print(f"An Unexcepected error occured:{e}")
     finally:
         print("Thankyou for using safe calculator.")
+"""
