@@ -400,3 +400,60 @@ if extra_ingredients:
 else:
     print("You have all the ingredients needed")
 """
+
+#20) Note Taiking App 
+FILE_NAME= "MyTestNotes.txt"
+
+def show_menu():
+    print("----------Note TaIKING App----------")
+    print("1. Add a new Note")
+    print("2. View all Note")
+    print("3. Delete all Note")
+    print("4. Exit")
+
+
+def add_note():
+    note = input("Enter Your Note: ")
+    with open(FILE_NAME,"a") as file:
+        file.write(note+"\n")
+    print("Note added successfully")
+
+
+def view_all_note():
+    try:
+        with open(FILE_NAME,"r") as file:
+            content = file.read()
+            if content:
+                print("\n -----All Notes-----")
+                print(content)
+            else:
+                print("\nNo notes found")
+    except FileNotFoundError:
+        print("No notes Found")
+
+def delete_notes():
+    confirm = input("Are you sure you want to delete all your note? (y/n): ")
+    if confirm.lower() == "y":
+        with open(FILE_NAME,"w") as file:
+            file.write("")
+            pass
+        print("All Note have been deleted.")
+    else:
+        print("Deletion cancelled")
+
+
+while True:
+    show_menu()
+    choice = int(input("Enter your choice (1-4): "))
+
+    if choice == 1:
+        add_note()
+    elif choice == 2:
+        view_all_note()
+    elif choice == 3:
+        delete_notes()
+    elif choice == 4:
+        print("Exiting Note-Taiking app...Good Bye guyszzz")
+        break
+    else:
+        print("invalid choice! try (1-4): ")
