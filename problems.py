@@ -459,3 +459,56 @@ while True:
     else:
         print("invalid choice! try (1-4): ")
 """
+
+#21) Safe Calculator 
+def add(x,y):
+    return x + y
+
+def sub(x,y):
+    return x - y
+
+def mul(x,y):
+    return x * y
+
+def div(x,y):
+    if y == 0:
+        raise ZeroDivisionError ("cannot divide by Zero")
+    return x / y
+
+def menu():
+    print("\n-----Safe Calculator------")
+    print("1. Addition")
+    print("2. Substract")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
+
+while True:
+    menu()
+    choice = int(input("Enter your valid choice (1-5) : "))
+    if choice == 5:
+        print("Exiting Calculator. Bye")
+        break
+    try:
+        num1 = float(input("Enter first number"))
+        num2 = float(input("Enter second number"))
+
+        if choice == 1:
+            print("Result is :", add(num1,num2))
+        elif choice == 2:
+            print("Result is :",sub(num1,num2))
+        elif choice == 3:
+            print("Result is :",mul(num1,num2))
+        elif choice == 4:
+            print("Result is :",div(num1,num2))
+        else:
+            print("Invalid choice...Select any valid option")
+
+    except ValueError:
+            print("Invalid input.Enter Valid Number")
+    except ZeroDivisionError as e:
+        print("Error: ",e)
+    except Exception as e:
+        print(f"An Unexcepected error occured:{e}")
+    finally:
+        print("Thankyou for using safe calculator.")
