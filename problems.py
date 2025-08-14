@@ -514,3 +514,51 @@ while True:
     finally:
         print("Thankyou for using safe calculator.")
 """
+
+#22) Temperature Convertor
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def celsius_to_kelvin(celsius):
+    return celsius + 273.15
+
+def fahrenheit_to_celsius(fahrenheit):
+      return (fahrenheit - 32) * 5/9
+
+def fahrenheit_to_kelvin(fahrenheit):
+      return (fahrenheit - 32 ) * 5/9 + 273.15
+
+def kelvin_to_celsius(kelvin):
+      return kelvin - 273.15
+
+def kelvin_to_fahrenheit(kelvin):
+      return (kelvin - 273.15)
+
+def menu():
+    print("\n-----Temperature Converter Menu-----")
+    print("1. Celsius to Fahrenheit and Kelvin")
+    print("2. Fahrenheit to Celsius and Kelvin")
+    print("3. Kelvin to Celsius and Fahrenheit")
+    print("4. Exit")
+
+while True:
+    menu()
+    choice = input("Enter Your choice (1/2/3/4) : ")
+
+    if choice == '1':
+        celsius = float(input("Enter the temperature in  Celsius: "))
+        print(f"Fahrenheit: {celsius_to_fahrenheit(celsius): .2f}")
+        print(f"Kelvin: {celsius_to_kelvin(celsius): .2f}")
+    elif choice == '2':
+        fahrenheit = float(input("Enter the Temperature in Fahrenheit: "))
+        print(f"Celsius: {fahrenheit_to_celsius(fahrenheit): .2f}")
+        print(f"Kelvin: {fahrenheit_to_kelvin(fahrenheit): .2f}")
+    elif choice == '3':
+        kelvin = float(input("Enter the temperature in Kelvin: "))
+        print(f"Celsius: {kelvin_to_celsius(kelvin): .2f}")
+        print(f"Fahrenheit: {celsius_to_kelvin(kelvin): .2f}")
+    elif choice == '4':
+        print("Exiting from the calculator")
+        break
+    else:
+        print("invalid choice!!!")
