@@ -516,6 +516,7 @@ while True:
 """
 
 #22) Temperature Convertor
+"""
 def celsius_to_fahrenheit(celsius):
     return (celsius * 9/5) + 32
 
@@ -562,3 +563,4 @@ while True:
         break
     else:
         print("invalid choice!!!")
+"""
