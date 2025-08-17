@@ -593,3 +593,35 @@ print("\n-----Passing and Failing Student-----\n")
 print("Passing Student: ",passing_student)
 print("Failing Student: ",failing_student)
 """
+
+#24) Random Password Generator
+import random, string
+
+def generate_pass(length = 12):
+    if length < 4:
+        raise ValueError("Password length must be at least 4 charactor")
+    
+    uppercase = string.ascii_uppercase
+    lowercase =string.ascii_uppercase
+    digits = string.digits
+    specal_chars = "!@#$%^&*()_+-=[]{}|;:',.<>?/"
+
+    password = [
+        random.choice(uppercase),
+        random.choice(lowercase),
+        random.choice(digits),
+        random.choice(specal_chars),
+    ]
+
+    all_char = uppercase + lowercase + digits + specal_chars
+    password += random.choices(all_char,k=length - 4)
+
+    random.shuffle(password)
+    return ''.join(password)
+
+try:
+    length = int(input("Enter the desired Password length (minimum 4): "))
+    password = generate_pass(length)
+    print('Generated Password:',password)
+except ValueError as e:
+    print(e)
