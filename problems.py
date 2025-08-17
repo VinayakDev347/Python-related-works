@@ -595,6 +595,7 @@ print("Failing Student: ",failing_student)
 """
 
 #24) Random Password Generator
+"""
 import random, string
 
 def generate_pass(length = 12):
@@ -625,3 +626,4 @@ try:
     print('Generated Password:',password)
 except ValueError as e:
     print(e)
+"""
