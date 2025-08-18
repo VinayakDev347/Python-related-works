@@ -627,3 +627,58 @@ try:
 except ValueError as e:
     print(e)
 """
+#25) Recipe Viewer App
+
+#loading recipe from file path 
+def load_recipe(file_path):
+    try:
+        with open(file_path,"r") as file:
+            content = file.read()
+            recipes = content.split("\n\n")
+            recipe_dict = {}
+            for recipe in recipes:
+                lines = recipe.split("\n")
+                if len(lines) >= 3:
+                    name = lines[0].strip()
+                    ingredients = lines[1].replace('ingredients: ','').strip()
+                    instructions = lines[2].replace('instructions: ','').strip()
+                    recipe_dict[name] = {"ingredients":ingredients, "instructions": instructions}
+            return recipe_dict
+    except FileNotFoundError:
+        print("File not Found!!!")
+        return()
+#Display recipe Menu
+def show_menu():
+    print("-----Recipe Viewer Menu-----")
+    print("1. View Recipe by Name")
+    print("2. List all the Recipes")
+    print("3. Exit ")
+
+def view_recipe(recipes):
+    name = input("Enter the name of the recipe: ")
+    if name in recipes:
+        print(f"\n-----Recipe {name} Details-----")
+        print(f"Name: {name}")
+        print(f"Ingredients: {recipes[name]['ingredients']}")
+        print(f"Instructions: {recipes[name]['instructions']}")
+    else:
+        print("Recipe Not Found")
+
+recipe_file = "recipe.txt"
+recipes = load_recipe(recipe_file)
+
+while True:
+    show_menu()
+    choice = input("Enter Your choice (1/2/3): ")
+
+    if choice == '1':
+        view_recipe(recipes)
+    elif choice == '2':
+        print("-----All Recipes-----")
+        for name in recipes:
+            print(name)
+    elif choice == '3':
+        print("Exiting the program.")
+        break
+    else:
+        print("Invalid choice,please try again...")

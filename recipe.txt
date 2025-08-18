@@ -1,0 +1,11 @@
+Pancakes
+Ingredients : Flour,Milk,Eggs,Sugar
+Instruction : Mix the Ingredients and fry.
+
+Saalad
+Ingredients : Lettuce,Tomato,Cucumber,Dressing
+Instruction : chop Ingredients and Mix
+
+Smoothie
+Ingredients : Banana,Milk,Honey
+Instruction : Blend all Ingredients
