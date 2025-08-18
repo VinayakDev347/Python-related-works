@@ -628,7 +628,7 @@ except ValueError as e:
     print(e)
 """
 #25) Recipe Viewer App
-
+"""
 #loading recipe from file path 
 def load_recipe(file_path):
     try:
@@ -682,3 +682,4 @@ while True:
         break
     else:
         print("Invalid choice,please try again...")
+"""
