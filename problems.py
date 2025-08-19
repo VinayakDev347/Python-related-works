@@ -683,3 +683,62 @@ while True:
     else:
         print("Invalid choice,please try again...")
 """
+
+#26) Daily Journal Logger
+journal_file = 'daily_journal.txt'
+
+def add_entry():
+    entry = input("Write your Journal entry: ")
+    with open(journal_file,'a') as file:
+        file.write(entry + '\n')
+    print("Entry Added Successfully!")
+
+def view_entry():
+    try:
+        with open(journal_file,'r') as file:
+            content = file.read()
+            if content:
+                print("\n-----Your Journal Entries-----")
+                print(content)
+            else:
+                print("No entries found. Start writing Today Itself")
+    except FileNotFoundError:
+        print("No Journal file Found. Add an entry first!")
+
+def search_entry():
+    keyword = input("Enter a keyword to search: ").lower()
+    try:
+        with open(journal_file,'r') as file:
+            content = file.readlines()
+            found = False
+            print("\n-----Search List-----")
+            for entry in content:
+                if keyword in entry.lower():
+                    print(entry.strip())
+                    found = True
+                if not found:
+                    print("No matching results found")
+    except FileNotFoundError:
+        print("No Journal file found, Add an entry first!")
+
+def show_menu():
+    print("\n-----Daily Journal Menu")
+    print("1. Add a new entry")
+    print("2. View all entries")
+    print("3. Search entries by keyword")
+    print("4. Exit")
+
+while True:
+    show_menu()
+    choice = input("Enter Your choice(1-4): ")
+    if choice == '1':
+        add_entry()
+    elif choice == '2':
+        view_entry()
+    elif choice == '3':
+        search_entry()
+    elif choice == '4':
+        print("Exited!!!")
+        break
+    else:
+        print("invalid choice ,please enter a number between 1 and 4")
