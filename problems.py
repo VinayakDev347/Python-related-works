@@ -685,6 +685,7 @@ while True:
 """
 
 #26) Daily Journal Logger
+'''
 journal_file = 'daily_journal.txt'
 
 def add_entry():
@@ -742,3 +743,4 @@ while True:
         break
     else:
         print("invalid choice ,please enter a number between 1 and 4")
+'''
