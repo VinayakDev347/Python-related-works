@@ -744,3 +744,44 @@ while True:
     else:
         print("invalid choice ,please enter a number between 1 and 4")
 '''
+#27) Student Report Generator
+import csv
+
+def process_student_data(input_file,output_file):
+    try:
+        with open(input_file,'r') as infile:
+            reader = csv.DictReader(infile)
+            student_reports = []
+            for row in reader:
+                name = row['Name']
+                math = int(row['Math'])
+                science = int(row['Science'])
+                english = int(row['English'])
+                average = round((math+science+english) / 3,2)
+                status = "Pass" if average >= 60 else "Fail"
+
+                student_reports.append({
+                    'Name' : name,
+                    'Math' : math,
+                    'Science' : science,
+                    'English' : english,
+                    'Average' : average,
+                    'Status' : status
+                })
+        with open(output_file,'w',newline='') as outfile:
+            fieldnames = ['Name','Math','Science','English','Average','Status']
+            writer = csv.DictWriter(outfile,fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(student_reports)
+        
+        print(f"Students Report generated in {output_file}successfully...")
+    except FileNotFoundError:
+        print(f"Error: File '{input_file}' not found")
+    except KeyError:
+        print(f"Error: Invalid coloumn names in the input file")
+    except Exception as e:
+        print(f"An a error occured: {e}")
+
+input_file = 'students.csv'
+output_file = 'students_report.csv'
+process_student_data(input_file,output_file)
