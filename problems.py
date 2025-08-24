@@ -878,3 +878,47 @@ while True:
   else:
     print("Invalid choice. Please enter a number between 1 and 5.")
 """
+#29) Weather App using OpenWeather API
+import requests
+
+API_KEY = "597a205a674c26be42eb8fe94123369e"
+
+city = 'Kannur'
+BASE_URL = f"https://api.openweathermap.org/data/2.5/weather"
+
+
+def getWeather_city(city):
+    try:
+        url = f"{BASE_URL}?q={city}&appid={API_KEY}&units=metric"
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            weather = {
+                "City" : data['name'],
+                "Temperature" : f"{data['main']['temp']}C",
+                "Weather" : data["weather"][0]['description'].title(),
+                "Humidity": f"{data['main']['humidity']}%",
+                "Wind Speed":f"{data['wind']['speed']}m/s"
+                }
+            return weather
+        elif response.status_code == 404:
+            print("City not found")
+        else:
+            print("An error occured. Status Code: ",response.status_code)
+    except Exception as e:
+        print("An Error occured: ",e)
+    return None
+
+def display_weather(weather):
+    print("\n-----Weather Information-----")
+    for key,value in weather.items():
+        print(f"{key}: {value}")
+
+while True:
+    print("\n-----Weather App-----")
+    city = input("Enter Your city name ( or 'q' to Quit) : ").strip()
+    if city.lower() == 'q':
+        break
+    weather = getWeather_city(city)
+    if weather:
+        display_weather(weather)
