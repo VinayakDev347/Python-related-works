@@ -879,6 +879,7 @@ while True:
     print("Invalid choice. Please enter a number between 1 and 5.")
 """
 #29) Weather App using OpenWeather API
+"""
 import requests
 
 API_KEY = "597a205a674c26be42eb8fe94123369e"
@@ -922,3 +923,4 @@ while True:
     weather = getWeather_city(city)
     if weather:
         display_weather(weather)
+"""
