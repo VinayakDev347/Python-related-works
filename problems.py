@@ -925,8 +925,8 @@ while True:
         display_weather(weather)
 """
 
+#30) Event Countdown Timer
 """
-""" 
 from datetime import datetime, timedelta
 import time
 
@@ -962,3 +962,4 @@ event_datetime = get_event_datetime()
 if event_datetime:
   print(f"Event set for: {event_datetime}")
   start_countdown(event_datetime)
+""" 
