@@ -966,6 +966,7 @@ if event_datetime:
 
 #32) Wikipedia article scrapper
 
+"""
 import requests
 from bs4 import BeautifulSoup
 
@@ -1027,3 +1028,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""
