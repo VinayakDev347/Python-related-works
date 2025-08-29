@@ -1032,6 +1032,7 @@ if __name__ == "__main__":
 """
 
 #33)  Bank Account Simulator
+"""
 class BankAccount:
   def __init__(self, account_holder, initial_balance=0):
     self.account_holder = account_holder
@@ -1117,3 +1118,5 @@ while True:
     break
   else:
     print("Invalid choice. Please select a valid option.")
+
+"""
