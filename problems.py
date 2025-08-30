@@ -1121,7 +1121,7 @@ while True:
 
 """
 #34) Library Management System
-
+"""
 class Book:
   def __init__(self, title, author):
     self.title = title
@@ -1197,3 +1197,4 @@ while True:
     break
   else:
     print("Invalid choice. Please select a valid option (1-5).")
+"""
