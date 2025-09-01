@@ -1201,6 +1201,7 @@ while True:
 
 #35) Get Movie Details
 
+"""
 from omdbapi.movie_search import GetMovie as g
 
 m = g(api_key='7839f29e')
@@ -1208,3 +1209,4 @@ print("\n-----Enter the Movie Name-----")
 movie_name = input("Enter the Movie Name: ")
 details = m.get_movie(title=movie_name)
 print(details)
+"""
