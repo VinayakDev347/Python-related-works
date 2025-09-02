@@ -1213,7 +1213,7 @@ print(details)
 
 #36) Tkinter -calculator
 
-
+"""
 import  tkinter as tk
 
 def click(event):
@@ -1256,3 +1256,4 @@ for label in button_labels:
     i += 1
 
 window.mainloop()
+"""
