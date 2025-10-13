@@ -1257,3 +1257,14 @@ for label in button_labels:
 
 window.mainloop()
 """
+
+
+#37)HOW MANY UPPERCASE LETTERS in the string
+"""
+check = "HellOII"
+num = 0
+for i in check:
+    if i.isupper():
+        num+=1
+print(num)
+"""
