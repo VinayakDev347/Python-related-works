@@ -1268,3 +1268,48 @@ for i in check:
         num+=1
 print(num)
 """
+ 
+#38) How many lower case letters  in the string
+"""
+check = "HHEeii"
+num = 0
+for i in check:
+    if i.islower():
+        num+=1
+print(num)
+
+#39) how many numbers in the string
+check = "He2233ll3o"
+num = 0 
+for i in check:
+    if i.isnumeric():
+        num+=1
+print(num)
+
+#40) length of the string without using len function
+check = "How Are You Bro"
+num = 0 
+for i in check:
+    num+=1
+print(num)
+
+#41) How many vowels in the string
+check = "Aplaneu"
+vow = "aeiouAEIOU"
+num = 0 
+for i in check:
+    if i in vow:
+        num += 1
+print(num)
+
+#42) sum the numbers in the string
+check = "2 birds are flying 3 cat ran 5 dog bark"
+sum = 0
+for word in check.split():
+    if word.isdigit():
+        sum += int(word)
+
+print(sum)
+"""
+
+#43) 
